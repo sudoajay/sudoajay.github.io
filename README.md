@@ -1,1 +1,1 @@
-# sudoajay.github.io
+Just Use for own perosnal use
