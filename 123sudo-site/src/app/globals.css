@@ -6,27 +6,155 @@
 
 @layer base {
   :root {
-    --background: 0 0% 4%; --foreground: 0 0% 98%; --card: 0 0% 9%; --card-foreground: 0 0% 98%;
-    --popover: 0 0% 7%; --popover-foreground: 0 0% 98%; --primary: 272 58% 42%; --primary-foreground: 0 0% 100%;
-    --secondary: 0 0% 13%; --secondary-foreground: 0 0% 88%; --muted: 0 0% 14%; --muted-foreground: 0 0% 63%;
-    --accent: 272 58% 42%; --accent-foreground: 0 0% 100%; --destructive: 0 62.8% 30.6%; --destructive-foreground: 0 0% 100%;
-    --border: 0 0% 17%; --input: 0 0% 17%; --ring: 272 58% 42%; --radius: 0.75rem;
+    --background: 0 0% 2%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 6%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 5%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 100%;
+    --primary-foreground: 0 0% 0%;
+    --secondary: 0 0% 10%;
+    --secondary-foreground: 0 0% 90%;
+    --muted: 0 0% 12%;
+    --muted-foreground: 0 0% 56%;
+    --accent: 0 0% 100%;
+    --accent-foreground: 0 0% 0%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 0% 16%;
+    --input: 0 0% 16%;
+    --ring: 0 0% 100%;
+    --radius: 1rem;
   }
-  * { border-color: hsl(var(--border)); }
-  html { scroll-behavior: smooth; color-scheme: dark; }
-  body { min-width: 320px; background: radial-gradient(circle at 50% -10%, rgba(111,45,168,.16), transparent 34rem), #0a0a0a; color: hsl(var(--foreground)); }
-  ::selection { background: rgba(153,76,217,.45); color: white; }
+
+  * {
+    border-color: hsl(var(--border));
+  }
+
+  html {
+    scroll-behavior: smooth;
+    color-scheme: dark;
+    background: #050505;
+  }
+
+  body {
+    min-width: 320px;
+    background:
+      radial-gradient(circle at 50% -20rem, rgba(255, 255, 255, 0.055), transparent 42rem),
+      #050505;
+    color: hsl(var(--foreground));
+    text-rendering: optimizeLegibility;
+  }
+
+  a,
+  button {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  a:focus-visible,
+  button:focus-visible {
+    @apply outline-none ring-2 ring-white ring-offset-2 ring-offset-black;
+  }
+
+  ::selection {
+    background: white;
+    color: black;
+  }
 }
 
 @layer components {
-  .page-shell { @apply mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8; }
-  .section-kicker { @apply mb-3 text-xs font-semibold uppercase tracking-[0.24em] text-primary; }
-  .glass-card { @apply border border-white/10 bg-white/[0.035] shadow-2xl shadow-black/20 backdrop-blur; }
-  .grid-glow { background-image: linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px); background-size:44px 44px; mask-image:linear-gradient(to bottom,black,transparent 85%); }
-  .legal-copy h2 { @apply mb-3 mt-10 text-xl font-semibold text-white; }
-  .legal-copy p { @apply my-4 leading-7 text-muted-foreground; }
-  .legal-copy ul { @apply my-4 list-disc space-y-2 pl-6 text-muted-foreground; }
-  .legal-copy strong { @apply text-white; }
+  .page-shell {
+    @apply mx-auto w-full max-w-[1240px] px-5 sm:px-7 lg:px-10;
+  }
+
+  .section-kicker {
+    @apply mb-4 text-xs font-semibold uppercase tracking-[0.24em] text-white/40;
+  }
+
+  .section-title {
+    @apply text-balance text-3xl font-semibold leading-[1.08] tracking-[-0.04em] sm:text-5xl;
+  }
+
+  .section-copy {
+    @apply mt-5 max-w-xl text-base leading-7 text-white/50;
+  }
+
+  .button-primary {
+    @apply inline-flex h-12 items-center justify-center gap-2 rounded-full bg-white px-5 text-sm font-semibold text-black shadow-[0_8px_30px_rgba(255,255,255,0.08)] transition duration-200 hover:-translate-y-0.5 hover:bg-white/90;
+  }
+
+  .button-secondary {
+    @apply inline-flex h-12 items-center justify-center gap-2 rounded-full border border-white/15 bg-white/[0.035] px-5 text-sm font-semibold text-white transition duration-200 hover:-translate-y-0.5 hover:border-white/25 hover:bg-white/[0.075];
+  }
+
+  .surface-card {
+    @apply rounded-3xl border border-white/10 bg-[#0b0b0b] shadow-[0_24px_80px_rgba(0,0,0,0.22)];
+  }
+
+  .interactive-card {
+    @apply transition duration-300 hover:-translate-y-1 hover:border-white/20 hover:bg-[#0f0f0f];
+  }
+
+  .hero-noise {
+    background:
+      radial-gradient(circle at 78% 36%, rgba(255, 255, 255, 0.09), transparent 25rem),
+      linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+      #050505;
+    background-size: auto, 64px 64px, 64px 64px, auto;
+    background-position: center;
+  }
+
+  .legal-copy h2 {
+    @apply mb-3 mt-12 text-xl font-semibold tracking-[-0.02em] text-white;
+  }
+
+  .legal-copy h3 {
+    @apply mb-2 mt-7 font-semibold text-white;
+  }
+
+  .legal-copy p {
+    @apply my-4 leading-7 text-white/60;
+  }
+
+  .legal-copy ul {
+    @apply my-4 list-disc space-y-2.5 pl-6 leading-7 text-white/60 marker:text-white/30;
+  }
+
+  .legal-copy a {
+    @apply text-white underline decoration-white/30 underline-offset-4 hover:decoration-white;
+  }
+
+  .legal-copy strong {
+    @apply font-semibold text-white;
+  }
 }
 
-@layer utilities { .text-balance { text-wrap: balance; } }
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    scrollbar-width: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

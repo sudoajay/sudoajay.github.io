@@ -1,20 +1,21 @@
 import { Card, CardContent } from "@/components/ui/card";
 
 export const metadata = {
-  title: "Privacy Policy - deScroll | 123sudo",
+  title: "Privacy Policy - deScroll",
   description: "Privacy Policy for the deScroll Android app.",
 };
 
 export default function PrivacyPolicyPage() {
   return (
-    <div className="py-16 md:py-24">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
-        <Card className="bg-card/50 border-primary/10">
-          <CardContent className="legal-copy max-w-none p-8 md:p-12">
-            <h1 className="text-3xl font-bold mb-2">Privacy Policy</h1>
-            <p className="text-muted-foreground mb-8 text-lg">How deScroll handles device activity, permissions, accounts, support, subscriptions, and optional cloud features.</p>
+    <div className="py-12 sm:py-20">
+      <div className="page-shell max-w-4xl">
+        <Card className="surface-card gap-0 py-0">
+          <CardContent className="legal-copy max-w-none p-6 sm:p-10 md:p-14">
+            <p className="section-kicker !mb-4 !mt-0">deScroll legal</p>
+            <h1 className="mb-3 text-3xl font-semibold tracking-[-0.035em] sm:text-4xl">Privacy Policy</h1>
+            <p className="!mb-9 !mt-0 text-base text-white/50 sm:text-lg">How deScroll handles device activity, permissions, accounts, support, subscriptions, and optional cloud features.</p>
             
-            <p><strong>Last updated:</strong> June 4, 2026</p>
+            <p><strong>Effective and last updated:</strong> June 21, 2026</p>
 
             <h2>Overview</h2>
             <p>
@@ -138,11 +139,31 @@ export default function PrivacyPolicyPage() {
               <li>Contact support through in-app Support Tickets or official product channels to ask privacy questions or request deletion of account-linked cloud data, subject to legal, security, billing, and abuse-prevention retention needs.</li>
             </ul>
 
+            <h2>Security</h2>
+            <p>
+              We use reasonable technical and organizational safeguards intended to protect information processed by deScroll. No storage or transmission method is completely secure, so we cannot guarantee absolute security.
+            </p>
+
+            <h2>International Processing</h2>
+            <p>
+              Service providers used for authentication, billing, cloud infrastructure, support, weather, analytics, crash reporting, or AI features may process information in countries other than your own. Where required, we rely on appropriate legal mechanisms and provider safeguards for those transfers.
+            </p>
+
+            <h2>Account Data and Deletion Requests</h2>
+            <p>
+              To request access to or deletion of account-linked cloud data, email <a href="mailto:sudoajay@gmail.com">sudoajay@gmail.com</a> from the email associated with your account and identify deScroll in the request. We may need to verify your identity. Some billing, fraud-prevention, security, support, or legal records may be retained where permitted or required.
+            </p>
+
             <h2>Children</h2>
             <p>deScroll is not intended for children under the age required by applicable law to provide valid consent, unless a parent or guardian has authorized use where permitted.</p>
 
             <h2>Policy Changes</h2>
             <p>We may update this Privacy Policy from time to time. When we do, we will revise the last updated date on this page. Continued use of the service after an update means the revised policy applies going forward.</p>
+
+            <h2>Contact</h2>
+            <p>
+              For privacy questions or requests, contact Ajay Singh / sudoajay at <a href="mailto:sudoajay@gmail.com">sudoajay@gmail.com</a>.
+            </p>
           </CardContent>
         </Card>
       </div>

@@ -1,29 +1,147 @@
+import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, ArrowUpRight, Check, Code2, Download, Globe2, MapPin, ShieldCheck, Sparkles } from "lucide-react";
-import { AppIcon, PhonePreview } from "@/components/descroll/AppVisual";
+import {
+  ArrowRight,
+  Code2,
+  Mail,
+  MapPin,
+  ShieldCheck,
+  Smartphone,
+} from "lucide-react";
+import { AppIcon, AppScreenshot } from "@/components/descroll/AppVisual";
 
-const playStore = "https://play.google.com/store/apps/details?id=com.sudoajay.descroll";
-const skills = ["Kotlin", "Android", "Jetpack Compose", "TypeScript", "React Native", "Electron", "Node.js", "Firebase"];
+export const metadata: Metadata = {
+  title: "sudoajay — Independent App Developer",
+  description:
+    "Ajay Singh builds focused Android and desktop applications under the name sudoajay.",
+};
 
-export default function Home() {
-  return <>
-    <section className="relative overflow-hidden border-b border-white/10"><div className="grid-glow absolute inset-0" /><div className="page-shell relative grid min-h-[720px] items-center gap-14 py-20 lg:grid-cols-[1.1fr_.9fr] lg:py-24">
-      <div><div className="mb-7 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-3 py-1.5 text-xs font-medium text-[#c791f2]"><span className="h-1.5 w-1.5 rounded-full bg-emerald-400" /> Independent app developer · India</div>
-      <h1 className="max-w-3xl text-balance text-5xl font-bold leading-[1.05] tracking-[-0.045em] sm:text-6xl lg:text-7xl">Apps that make your <span className="bg-gradient-to-r from-[#b96dff] to-[#7b36b5] bg-clip-text text-transparent">digital life</span> better.</h1>
-      <p className="mt-6 max-w-xl text-lg leading-8 text-muted-foreground">Hi, I&apos;m Ajay Singh, founder of 123sudo. I build focused Android and desktop tools for productivity, digital wellbeing, and everyday problems.</p>
-      <div className="mt-9 flex flex-wrap gap-3"><Link href="#apps" className="inline-flex h-12 items-center gap-2 rounded-lg bg-primary px-5 text-sm font-semibold text-white shadow-xl shadow-primary/25 transition hover:bg-[#8036bd]">View my apps <ArrowRight className="h-4 w-4" /></Link><Link href="https://play.google.com/store/apps/developer?id=sudoajay" target="_blank" className="inline-flex h-12 items-center gap-2 rounded-lg border border-white/10 bg-white/5 px-5 text-sm font-semibold transition hover:border-white/20 hover:bg-white/10">Google Play <ArrowUpRight className="h-4 w-4" /></Link></div>
-      <div className="mt-10 flex flex-wrap gap-x-6 gap-y-3 text-xs text-muted-foreground"><span className="flex items-center gap-2"><MapPin className="h-4 w-4 text-primary" /> India</span><span className="flex items-center gap-2"><ShieldCheck className="h-4 w-4 text-primary" /> Privacy-conscious products</span><span className="flex items-center gap-2"><Code2 className="h-4 w-4 text-primary" /> Building since 2022</span></div></div>
-      <div className="relative hidden lg:block"><div className="absolute left-1/2 top-1/2 h-80 w-80 -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/25 blur-[100px]" /><div className="relative rotate-3 transition duration-500 hover:rotate-0"><PhonePreview /></div><div className="glass-card absolute left-0 top-20 rounded-xl px-4 py-3"><p className="text-xs text-muted-foreground">Featured product</p><p className="mt-1 font-semibold">deScroll</p></div><div className="glass-card absolute bottom-20 right-0 rounded-xl px-4 py-3"><p className="flex items-center gap-2 text-sm font-medium"><Check className="h-4 w-4 text-emerald-400" /> Available on Android</p></div></div>
-    </div></section>
+export default function HomePage() {
+  return (
+    <>
+      <section className="hero-noise relative overflow-hidden border-b border-white/10">
+        <div className="page-shell relative grid min-h-[700px] items-center gap-12 py-16 sm:py-20 lg:grid-cols-[1.05fr_.95fr] lg:py-24">
+          <div>
+            <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-white/10 bg-black/30 px-3 py-1.5 text-xs text-white/55 backdrop-blur">
+              <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
+              Independent app developer · India
+            </div>
+            <p className="text-sm font-medium tracking-wide text-white/50">
+              Hi, I&apos;m Ajay Singh — sudoajay.
+            </p>
+            <h1 className="mt-5 max-w-3xl text-balance text-[3.25rem] font-semibold leading-[0.98] tracking-[-0.055em] sm:text-7xl">
+              I build apps with a clear purpose.
+            </h1>
+            <p className="mt-7 max-w-xl text-base leading-7 text-white/60 sm:text-lg sm:leading-8">
+              Focused Android and desktop tools for digital wellbeing,
+              productivity, and everyday problems—designed without unnecessary
+              complexity.
+            </p>
+            <div className="mt-9 flex flex-col gap-3 min-[420px]:flex-row">
+              <Link href="#apps" className="button-primary">
+                View my apps <ArrowRight className="h-4 w-4" />
+              </Link>
+              <Link href="/contact" className="button-secondary">
+                Contact me <Mail className="h-4 w-4" />
+              </Link>
+            </div>
+            <div className="mt-10 flex flex-wrap gap-x-6 gap-y-3 border-t border-white/10 pt-6 text-xs text-white/45">
+              <span className="flex items-center gap-2">
+                <MapPin className="h-4 w-4 text-white" /> India
+              </span>
+              <span className="flex items-center gap-2">
+                <ShieldCheck className="h-4 w-4 text-white" /> Privacy-conscious
+              </span>
+              <span className="flex items-center gap-2">
+                <Code2 className="h-4 w-4 text-white" /> Building since 2022
+              </span>
+            </div>
+          </div>
 
-    <section className="border-b border-white/10 bg-white/[0.02]"><div className="page-shell grid grid-cols-2 divide-x divide-y divide-white/10 sm:grid-cols-4 sm:divide-y-0">{[["5+","Apps published"],["10K+","Downloads"],["4.0+","Average rating"],["2022","Building since"]].map(([value,label])=><div key={label} className="px-4 py-7 text-center"><p className="text-2xl font-bold tracking-tight sm:text-3xl">{value}</p><p className="mt-1 text-xs text-muted-foreground">{label}</p></div>)}</div></section>
+          <div className="relative mx-auto hidden w-full max-w-[500px] lg:block">
+            <div className="absolute inset-16 rounded-full bg-white/10 blur-[100px]" />
+            <div className="relative mx-auto max-w-[310px] rotate-[3deg] transition duration-500 hover:rotate-0">
+              <AppScreenshot
+                number={1}
+                alt="deScroll minimalist launcher by sudoajay"
+                priority
+              />
+            </div>
+            <div className="absolute left-0 top-28 rounded-2xl border border-white/10 bg-black/75 p-4 shadow-2xl backdrop-blur-xl">
+              <p className="text-xs text-white/40">Featured app</p>
+              <p className="mt-1 font-semibold">deScroll</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-    <section id="apps" className="py-24"><div className="page-shell"><p className="section-kicker">Featured app</p><div className="mb-10 flex flex-col justify-between gap-4 sm:flex-row sm:items-end"><div><h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Reclaim your attention.</h2><p className="mt-3 max-w-xl text-muted-foreground">deScroll combines a minimalist launcher with practical controls that help you use your phone with intention.</p></div><Link href="/apps/descroll" className="flex items-center gap-2 text-sm font-semibold text-primary">Explore deScroll <ArrowRight className="h-4 w-4" /></Link></div>
-      <div className="glass-card grid overflow-hidden rounded-3xl lg:grid-cols-2"><div className="flex flex-col justify-center p-7 sm:p-12"><div className="flex items-center gap-4"><AppIcon className="h-16 w-16 text-7xl" /><div><p className="text-2xl font-bold">deScroll</p><p className="text-sm text-primary">AI Smart Launcher</p></div></div><h3 className="mt-9 text-3xl font-semibold tracking-tight">Break phone addiction.<br />Reclaim your focus.</h3><p className="mt-5 max-w-lg leading-7 text-muted-foreground">Block distracting apps, quiet notifications, understand screen time, and replace a cluttered home screen with a calmer launcher.</p><div className="mt-7 grid gap-3 text-sm text-muted-foreground sm:grid-cols-2">{["Smart app blocking","Focus sessions","Usage insights","Minimal launcher"].map(item=><p key={item} className="flex items-center gap-2"><Check className="h-4 w-4 text-primary" />{item}</p>)}</div><div className="mt-9 flex flex-wrap gap-3"><Link href="/apps/descroll" className="inline-flex h-11 items-center gap-2 rounded-lg bg-primary px-5 text-sm font-semibold">View full details <ArrowRight className="h-4 w-4" /></Link><Link href={playStore} target="_blank" className="inline-flex h-11 items-center gap-2 rounded-lg border border-white/10 bg-white/5 px-5 text-sm font-semibold"><Download className="h-4 w-4" /> Download</Link></div></div><div className="relative min-h-[560px] overflow-hidden bg-gradient-to-br from-primary/20 via-[#130d18] to-black p-10"><div className="absolute inset-0 opacity-30 grid-glow" /><div className="relative translate-y-8"><PhonePreview /></div></div></div>
-    </div></section>
+      <section id="apps" className="scroll-mt-20 py-20 sm:py-28">
+        <div className="page-shell">
+          <div className="flex flex-col justify-between gap-5 md:flex-row md:items-end">
+            <div className="max-w-2xl">
+              <p className="section-kicker">Featured app</p>
+              <h2 className="section-title">Technology that respects your attention.</h2>
+            </div>
+            <p className="max-w-sm text-sm leading-6 text-white/45">
+              Each product begins with a real problem and aims for a direct,
+              useful solution.
+            </p>
+          </div>
 
-    <section className="border-y border-white/10 bg-white/[0.02] py-24"><div className="page-shell"><p className="section-kicker">All apps</p><h2 className="text-3xl font-bold tracking-tight">Small tools. Clear purpose.</h2><div className="mt-10 grid gap-5 md:grid-cols-2"><Link href="/apps/descroll" className="group glass-card rounded-2xl p-6 transition hover:border-primary/40"><div className="flex items-start justify-between"><AppIcon className="h-12 w-12 text-6xl" /><ArrowUpRight className="h-5 w-5 text-muted-foreground transition group-hover:text-primary" /></div><h3 className="mt-8 text-xl font-semibold">deScroll</h3><p className="mt-2 text-sm leading-6 text-muted-foreground">A digital wellbeing launcher for Android.</p></Link><div className="rounded-2xl border border-dashed border-white/15 p-6"><div className="grid h-12 w-12 place-items-center rounded-xl bg-white/5"><Sparkles className="h-5 w-5 text-muted-foreground" /></div><h3 className="mt-8 text-xl font-semibold text-white/70">More in progress</h3><p className="mt-2 text-sm leading-6 text-muted-foreground">New focused utilities are currently being built.</p></div></div></div></section>
+          <Link
+            href="/apps/descroll"
+            className="surface-card interactive-card group mt-12 grid overflow-hidden lg:grid-cols-[.9fr_1.1fr]"
+          >
+            <div className="flex flex-col justify-center p-7 sm:p-12">
+              <div className="flex items-center gap-4">
+                <AppIcon className="h-16 w-16" />
+                <div>
+                  <p className="text-2xl font-semibold">deScroll</p>
+                  <p className="mt-1 text-sm text-white/40">
+                    Android digital wellbeing
+                  </p>
+                </div>
+              </div>
+              <h3 className="mt-10 text-balance text-3xl font-semibold tracking-[-0.035em] sm:text-4xl">
+                Your phone, without the pull.
+              </h3>
+              <p className="mt-5 max-w-lg leading-7 text-white/50">
+                A minimalist launcher with app blocking, focus controls, usage
+                insights, notification management, and scroll tracking.
+              </p>
+              <div className="mt-8 flex items-center gap-2 text-sm font-semibold">
+                Explore deScroll
+                <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" />
+              </div>
+            </div>
+            <div className="relative flex min-h-[430px] items-end justify-center overflow-hidden border-t border-white/10 bg-gradient-to-b from-white/[0.045] to-transparent px-6 pt-8 sm:min-h-[520px] sm:px-10 sm:pt-10 lg:border-l lg:border-t-0">
+              <div className="absolute inset-20 rounded-full bg-white/[0.06] blur-[90px]" />
+              <AppScreenshot
+                number={2}
+                alt="deScroll Protect app screen"
+                className="relative max-w-[340px] translate-y-6"
+              />
+            </div>
+          </Link>
+        </div>
+      </section>
 
-    <section className="py-24"><div className="page-shell grid gap-12 lg:grid-cols-[.8fr_1.2fr]"><div><p className="section-kicker">About 123sudo</p><h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Independent by design.</h2><div className="mt-7 flex gap-3 text-sm text-muted-foreground"><Globe2 className="mt-0.5 h-5 w-5 shrink-0 text-primary" /><p>Founded and operated by Ajay Singh in India.</p></div></div><div><p className="text-lg leading-8 text-white/85">123sudo is an independent software studio building focused, privacy-conscious productivity tools that help people live better digital lives.</p><p className="mt-5 leading-7 text-muted-foreground">Every app starts with a real problem—phone addiction, screen time, or an inefficient workflow—and aims for a simple, useful solution. No unnecessary bloat or manipulative patterns.</p><div className="mt-8 flex flex-wrap gap-2">{skills.map(skill=><span key={skill} className="rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-xs text-muted-foreground">{skill}</span>)}</div></div></div></section>
-  </>;
+      <section className="py-20 sm:py-24">
+        <div className="page-shell">
+          <div className="surface-card flex flex-col items-start justify-between gap-8 p-7 sm:flex-row sm:items-center sm:p-10">
+            <div>
+              <Smartphone className="h-6 w-6" />
+              <h2 className="mt-5 text-2xl font-semibold">Need help with an app?</h2>
+              <p className="mt-2 text-sm text-white/45">
+                Contact me by email or use the support ticket option inside deScroll.
+              </p>
+            </div>
+            <Link href="/contact" className="button-primary shrink-0">
+              Open support <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
+        </div>
+      </section>
+    </>
+  );
 }

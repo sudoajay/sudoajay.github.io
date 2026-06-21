@@ -2,16 +2,11 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
-First, run the development server:
+Install dependencies and run the development server with pnpm:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+pnpm install
 pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
@@ -31,11 +26,11 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 
 ## Production URLs
 
-- Home: https://sudoajay.com
-- deScroll: https://sudoajay.com/apps/descroll
-- Privacy: https://sudoajay.com/descroll/privacy-policy
-- Terms: https://sudoajay.com/descroll/terms-and-conditions
-- Contact: https://sudoajay.com/contact
+- Home: https://123sudo.com
+- deScroll: https://123sudo.com/apps/descroll
+- Privacy: https://123sudo.com/descroll/privacy-policy
+- Terms: https://123sudo.com/descroll/terms-and-conditions
+- Contact: https://123sudo.com/contact
 
 ## Deploy on Vercel
 
@@ -43,8 +38,8 @@ Import this repository into Vercel, set the Root Directory to `123sudo-site`,
 and configure:
 
 ```bash
-NEXT_PUBLIC_SITE_URL=https://sudoajay.com
+NEXT_PUBLIC_SITE_URL=https://123sudo.com
 ```
 
-After deployment, add both `sudoajay.com` and `www.sudoajay.com` to the Vercel
-project and configure the DNS records Vercel provides.
+The production build is written to `out/` and can be published to the hosting
+provider configured for `123sudo.com`.

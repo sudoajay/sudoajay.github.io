@@ -1,34 +1,12 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import { ArrowRight, BarChart3, BellOff, Download, Focus, Home, Shield, ShieldBan, Sparkles, TrendingUp } from "lucide-react";
-import { AppIcon, PhonePreview } from "@/components/descroll/AppVisual";
+import { DescrollLanding } from "@/components/descroll/DescrollLanding";
 
-export const metadata: Metadata = { title: "deScroll — Break Phone Addiction", description: "deScroll helps reduce screen time, block distracting apps and build healthier phone habits. An Android app by 123sudo." };
-const playStore = "https://play.google.com/store/apps/details?id=com.sudoajay.descroll";
-const features = [
-  ["Smart App Blocker","Block selected apps with schedules, usage limits, and cooldown timers.",ShieldBan],
-  ["Notification Blocker","Quiet distracting notifications from selected apps when you need focus.",BellOff],
-  ["Usage Insights","Understand where your time goes with clear usage analytics.",BarChart3],
-  ["Focus Mode","Start a distraction-blocking focus session with one tap.",Focus],
-  ["Minimalist Launcher","Replace a cluttered home screen with a calmer launcher.",Home],
-  ["Usage Guardian","Set daily app limits and receive warnings as you approach them.",Shield],
-  ["Progress Tracking","Review daily, weekly, and monthly digital wellbeing trends.",TrendingUp],
-  ["AI Assistant","Personalized guidance for improving digital habits.",Sparkles],
-] as const;
+export const metadata: Metadata = {
+  title: "deScroll — Reclaim Your Focus",
+  description:
+    "A minimalist Android launcher with app blocking, focus tools, usage insights, notification control, and scroll tracking.",
+};
 
 export default function DescrollPage() {
-  return <>
-    <section className="relative overflow-hidden border-b border-white/10 py-20 lg:py-28"><div className="grid-glow absolute inset-0" /><div className="page-shell relative grid items-center gap-16 lg:grid-cols-[1fr_.8fr]"><div><div className="flex items-center gap-4"><AppIcon className="h-20 w-20 text-8xl" /><div><p className="text-sm font-medium text-primary">Free to download · Android</p><h1 className="text-4xl font-bold tracking-tight sm:text-5xl">deScroll</h1></div></div><h2 className="mt-9 max-w-2xl text-balance text-4xl font-bold leading-tight tracking-[-0.04em] sm:text-6xl">Break phone addiction. Reclaim your focus.</h2><p className="mt-6 max-w-xl text-lg leading-8 text-muted-foreground">A smart Android launcher that helps you reduce screen time, block distracting apps, and build healthier digital habits.</p><div className="mt-9 flex flex-wrap items-center gap-4"><Link href={playStore} target="_blank" className="inline-flex h-12 items-center gap-2 rounded-lg bg-primary px-5 text-sm font-semibold shadow-xl shadow-primary/25"><Download className="h-4 w-4" /> Get it on Google Play</Link><span className="text-xs text-muted-foreground">Android 8.0+ · Privacy-conscious</span></div></div><div className="relative"><div className="absolute inset-10 rounded-full bg-primary/25 blur-[90px]" /><div className="relative rotate-3"><PhonePreview /></div></div></div></section>
-
-    <section className="py-20"><div className="page-shell"><div className="text-center"><p className="section-kicker">The problem</p><h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Does this sound familiar?</h2></div><div className="mt-10 grid gap-5 md:grid-cols-3">{[["01","You open social media without thinking"],["02","Minutes turn into hours of scrolling"],["03","Your focus disappears when you need it"]].map(([n,text])=><div key={n} className="glass-card rounded-2xl p-6"><span className="text-xs font-bold text-primary">{n}</span><p className="mt-8 text-lg font-medium leading-7">{text}</p></div>)}</div><p className="mt-9 text-center text-lg font-medium text-primary">deScroll was built to interrupt that loop.</p></div></section>
-
-    <section className="border-y border-white/10 bg-white/[0.02] py-24"><div className="page-shell"><div className="max-w-2xl"><p className="section-kicker">Core features</p><h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Practical controls for better habits.</h2><p className="mt-4 text-muted-foreground">Use only the tools you need, with controls designed to keep you intentional without making your phone harder to use.</p></div><div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">{features.map(([title,description,Icon],index)=><div key={title} className="rounded-2xl border border-white/10 bg-[#111] p-5 transition hover:-translate-y-1 hover:border-primary/40"><div className="flex items-start justify-between"><div className="grid h-10 w-10 place-items-center rounded-xl bg-primary/15 text-primary"><Icon className="h-5 w-5" /></div>{index===7&&<span className="rounded-full bg-white/5 px-2 py-1 text-[10px] uppercase tracking-wider text-muted-foreground">Coming soon</span>}</div><h3 className="mt-6 font-semibold">{title}</h3><p className="mt-3 text-sm leading-6 text-muted-foreground">{description}</p></div>)}</div></div></section>
-
-    <section className="overflow-hidden py-24"><div className="page-shell"><div className="text-center"><p className="section-kicker">Product preview</p><h2 className="text-3xl font-bold tracking-tight sm:text-4xl">A calmer way to use your phone.</h2><p className="mt-3 text-sm text-muted-foreground">Interface previews shown for product illustration.</p></div><div className="mt-14 flex snap-x gap-8 overflow-x-auto pb-10 pt-3 lg:justify-center">{(["home","focus","insights"] as const).map((variant,index)=><div key={variant} className={`min-w-[280px] snap-center ${index===1?"lg:-translate-y-6":""}`}><PhonePreview variant={variant} /></div>)}</div></div></section>
-
-    <section className="border-y border-white/10 bg-white/[0.02] py-24"><div className="page-shell"><div className="text-center"><p className="section-kicker">Getting started</p><h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Three simple steps.</h2></div><div className="mt-12 grid gap-5 md:grid-cols-3">{[["1","Download","Install deScroll from Google Play."],["2","Choose","Set app limits and a focus schedule."],["3","Improve","Review your patterns and adjust over time."]].map(([n,title,text])=><div key={n} className="relative rounded-2xl border border-white/10 p-7"><span className="text-5xl font-black text-white/5">{n}</span><h3 className="mt-5 text-xl font-semibold">{title}</h3><p className="mt-2 text-sm leading-6 text-muted-foreground">{text}</p></div>)}</div></div></section>
-
-    <section className="py-24"><div className="page-shell"><div className="overflow-hidden rounded-3xl border border-primary/30 bg-gradient-to-br from-primary/25 via-[#171019] to-[#0d0d0d] p-8 text-center sm:p-14"><h2 className="text-3xl font-bold tracking-tight sm:text-5xl">Ready to use your phone<br />with more intention?</h2><p className="mx-auto mt-5 max-w-xl text-muted-foreground">Download deScroll on Google Play and start building a setup that supports your focus.</p><Link href={playStore} target="_blank" className="mt-8 inline-flex h-12 items-center gap-2 rounded-lg bg-white px-5 text-sm font-semibold text-black">View on Google Play <ArrowRight className="h-4 w-4" /></Link></div>
-    <div className="mt-8 grid gap-px overflow-hidden rounded-2xl border border-white/10 bg-white/10 sm:grid-cols-2 lg:grid-cols-4">{[["Developer","Ajay Singh (123sudo)"],["Package","com.sudoajay.descroll"],["Platform","Android 8.0+"],["Category","Productivity"]].map(([label,value])=><div key={label} className="bg-[#0d0d0d] p-5"><p className="text-xs text-muted-foreground">{label}</p><p className="mt-1 text-sm font-medium">{value}</p></div>)}</div><div className="mt-5 flex flex-wrap justify-center gap-5 text-sm text-primary"><Link href="/descroll/privacy-policy">Privacy Policy</Link><Link href="/descroll/terms-and-conditions">Terms & Conditions</Link><Link href={playStore} target="_blank">Google Play</Link></div></div></section>
-  </>;
+  return <DescrollLanding />;
 }

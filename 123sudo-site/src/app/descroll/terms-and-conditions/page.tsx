@@ -1,20 +1,21 @@
 import { Card, CardContent } from "@/components/ui/card";
 
 export const metadata = {
-  title: "Terms and Conditions - deScroll | 123sudo",
+  title: "Terms and Conditions - deScroll",
   description: "Terms and Conditions for the deScroll Android app.",
 };
 
 export default function TermsAndConditionsPage() {
   return (
-    <div className="py-16 md:py-24">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
-        <Card className="bg-card/50 border-primary/10">
-          <CardContent className="legal-copy max-w-none p-8 md:p-12">
-            <h1 className="text-3xl font-bold mb-2">Terms and Conditions</h1>
-            <p className="text-muted-foreground mb-8 text-lg">The rules and conditions that apply when you access or use deScroll, including subscriptions and acceptable use.</p>
+    <div className="py-12 sm:py-20">
+      <div className="page-shell max-w-4xl">
+        <Card className="surface-card gap-0 py-0">
+          <CardContent className="legal-copy max-w-none p-6 sm:p-10 md:p-14">
+            <p className="section-kicker !mb-4 !mt-0">deScroll legal</p>
+            <h1 className="mb-3 text-3xl font-semibold tracking-[-0.035em] sm:text-4xl">Terms and Conditions</h1>
+            <p className="!mb-9 !mt-0 text-base text-white/50 sm:text-lg">The rules and conditions that apply when you access or use deScroll, including subscriptions and acceptable use.</p>
             
-            <p><strong>Last updated:</strong> June 4, 2026</p>
+            <p><strong>Effective and last updated:</strong> June 21, 2026</p>
 
             <h2>Acceptance of Terms</h2>
             <p>By downloading, accessing, or using deScroll, you agree to these Terms and Conditions. If you do not agree, do not use the service.</p>
@@ -65,11 +66,22 @@ export default function TermsAndConditionsPage() {
             <h2>Limitation of Liability</h2>
             <p>To the maximum extent permitted by law, we are not liable for indirect, incidental, special, consequential, exemplary, or punitive damages, or for loss of data, revenue, profits, or business opportunities arising from your use of deScroll.</p>
 
+            <h2>Indemnity</h2>
+            <p>To the extent permitted by law, you agree to be responsible for claims, losses, and reasonable costs arising from your unlawful misuse of deScroll, violation of these terms, or infringement of another person's rights.</p>
+
             <h2>Termination</h2>
             <p>We may suspend or terminate access to the service if we believe you have violated these terms, created risk for the service or other users, or where required for legal, security, or operational reasons.</p>
 
             <h2>Changes to These Terms</h2>
             <p>We may revise these Terms and Conditions from time to time. When we do, we will post the updated version here and update the last updated date. Your continued use of deScroll after changes take effect means you accept the revised terms.</p>
+
+            <h2>Governing Law</h2>
+            <p>These terms are governed by the laws of India, without limiting any mandatory consumer rights that apply in your country or region. Courts with jurisdiction in India will handle disputes unless applicable law requires otherwise.</p>
+
+            <h2>Contact</h2>
+            <p>
+              Questions about these terms can be sent to Ajay Singh / sudoajay at <a href="mailto:sudoajay@gmail.com">sudoajay@gmail.com</a>.
+            </p>
           </CardContent>
         </Card>
       </div>
