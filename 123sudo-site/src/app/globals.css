@@ -1,0 +1,32 @@
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 4%; --foreground: 0 0% 98%; --card: 0 0% 9%; --card-foreground: 0 0% 98%;
+    --popover: 0 0% 7%; --popover-foreground: 0 0% 98%; --primary: 272 58% 42%; --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 13%; --secondary-foreground: 0 0% 88%; --muted: 0 0% 14%; --muted-foreground: 0 0% 63%;
+    --accent: 272 58% 42%; --accent-foreground: 0 0% 100%; --destructive: 0 62.8% 30.6%; --destructive-foreground: 0 0% 100%;
+    --border: 0 0% 17%; --input: 0 0% 17%; --ring: 272 58% 42%; --radius: 0.75rem;
+  }
+  * { border-color: hsl(var(--border)); }
+  html { scroll-behavior: smooth; color-scheme: dark; }
+  body { min-width: 320px; background: radial-gradient(circle at 50% -10%, rgba(111,45,168,.16), transparent 34rem), #0a0a0a; color: hsl(var(--foreground)); }
+  ::selection { background: rgba(153,76,217,.45); color: white; }
+}
+
+@layer components {
+  .page-shell { @apply mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8; }
+  .section-kicker { @apply mb-3 text-xs font-semibold uppercase tracking-[0.24em] text-primary; }
+  .glass-card { @apply border border-white/10 bg-white/[0.035] shadow-2xl shadow-black/20 backdrop-blur; }
+  .grid-glow { background-image: linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px); background-size:44px 44px; mask-image:linear-gradient(to bottom,black,transparent 85%); }
+  .legal-copy h2 { @apply mb-3 mt-10 text-xl font-semibold text-white; }
+  .legal-copy p { @apply my-4 leading-7 text-muted-foreground; }
+  .legal-copy ul { @apply my-4 list-disc space-y-2 pl-6 text-muted-foreground; }
+  .legal-copy strong { @apply text-white; }
+}
+
+@layer utilities { .text-balance { text-wrap: balance; } }
