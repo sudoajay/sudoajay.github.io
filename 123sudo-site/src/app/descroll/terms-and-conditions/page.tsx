@@ -43,7 +43,7 @@ export default function TermsAndConditionsPage() {
             <p>If you revoke these permissions, related features may stop working, display incomplete data, or become unavailable until access is restored.</p>
 
             <h2>Accounts and Access</h2>
-            <p>Some features may require sign-in, premium access, network access, or specific Android permissions. You are responsible for safeguarding your device, account credentials, and access to connected services.</p>
+            <p>Some features may require anonymous device authentication, premium access, network access, or specific Android permissions. You are responsible for safeguarding your device and access to connected services.</p>
             <p>We may suspend or restrict account-linked features if we believe there is abuse, fraud, security risk, payment failure, policy violation, or unlawful activity.</p>
 
             <h2>AI Helper and Support</h2>

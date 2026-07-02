@@ -30,7 +30,7 @@ export default function PrivacyPolicyPage() {
             <ul>
               <li>Local app settings, launcher preferences, selected apps, block lists, warning messages, cooldown settings, focus configurations, hidden or renamed apps, and other product customizations.</li>
               <li>Local usage data, app usage summaries, notification history, short-video scroll counts, overlay state, and chat history stored in the app database when related features are enabled.</li>
-              <li>Account information from Google/Firebase sign-in, such as your user ID and email address, when you sign in for AI Helper, support, or subscription features.</li>
+              <li>An anonymous device identifier (Firebase UID) when you use AI Helper, support, or subscription features. We do not collect names, email addresses, or Google accounts.</li>
               <li>AI Helper messages, selected chat history, app version, feature configuration, and requested usage analytics context when you ask the AI Helper to answer using your deScroll data.</li>
               <li>Support ticket content, replies, ticket status, priority, app version, and related metadata when you contact support in the app.</li>
               <li>Subscription and purchase information needed to verify or manage premium access, such as product ID, base plan ID, purchase token, order ID, purchase state, billing response, and subscription status.</li>
@@ -86,7 +86,7 @@ export default function PrivacyPolicyPage() {
 
             <h2>Accounts, AI Helper, Support, and Subscriptions</h2>
             <p>
-              Sign-in is optional for core launcher and blocking features, but may be required for AI Helper, support tickets, account-linked chat history, and premium access.
+              Anonymous device authentication is automatically handled in the background for AI Helper, support tickets, and premium access. We do not require you to create an account with an email address or password.
             </p>
             <p>
               When you use AI Helper, your message and selected context needed to answer your request may be sent to The War Room backend and AI service providers. If you ask about your usage data, deScroll may include a limited analytics summary, such as app names, package names, usage duration, scroll counts, dates, and configured focus or blocking settings relevant to your question.
@@ -151,7 +151,7 @@ export default function PrivacyPolicyPage() {
 
             <h2>Account Data and Deletion Requests</h2>
             <p>
-              To request access to or deletion of account-linked cloud data, email <a href="mailto:sudoajay@gmail.com">sudoajay@gmail.com</a> from the email associated with your account and identify deScroll in the request. We may need to verify your identity. Some billing, fraud-prevention, security, support, or legal records may be retained where permitted or required.
+              To request access to or deletion of account-linked cloud data, email <a href="mailto:sudoajay@gmail.com">sudoajay@gmail.com</a> and provide your anonymous device ID (available in the app settings) so we can identify your records. We do not collect emails, so we cannot look up your data by email address. Some billing, fraud-prevention, security, support, or legal records may be retained where permitted or required.
             </p>
 
             <h2>Children</h2>
