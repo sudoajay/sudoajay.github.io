@@ -15,7 +15,7 @@ export default function PrivacyPolicyPage() {
             <h1 className="mb-3 text-3xl font-semibold tracking-[-0.035em] sm:text-4xl">Privacy Policy</h1>
             <p className="!mb-9 !mt-0 text-base text-white/50 sm:text-lg">How deScroll handles device activity, permissions, accounts, support, subscriptions, and optional cloud features.</p>
             
-            <p><strong>Effective and last updated:</strong> June 21, 2026</p>
+            <p><strong>Effective and last updated:</strong> October 29, 2026</p>
 
             <h2>Overview</h2>
             <p>
@@ -92,6 +92,9 @@ export default function PrivacyPolicyPage() {
               When you use AI Helper, your message and selected context needed to answer your request may be sent to The War Room backend and AI service providers. If you ask about your usage data, deScroll may include a limited analytics summary, such as app names, package names, usage duration, scroll counts, dates, and configured focus or blocking settings relevant to your question.
             </p>
             <p>
+              Messages are automatically checked for safety and then sent to Google Gemini through Google Cloud Vertex AI to generate the reply. AI Helper messages and replies are not stored on our servers after the reply is returned. Your chat history is kept in the app on your device. To apply daily message limits, we keep a count of today&apos;s AI Helper messages, which resets every day.
+            </p>
+            <p>
               Support tickets send the message and metadata you provide so the support team can reply. Subscription features send purchase and status data needed to verify premium access through Google Play and maintain entitlement records.
             </p>
 
@@ -101,7 +104,7 @@ export default function PrivacyPolicyPage() {
               <li>Provide core app functionality and premium features.</li>
               <li>Maintain subscriptions, restore purchases, and prevent abuse or fraud.</li>
               <li>Respond to support requests and service inquiries.</li>
-              <li>Answer AI Helper requests and maintain account-linked chat history when you use that feature.</li>
+              <li>Answer AI Helper requests and apply daily message limits when you use that feature.</li>
               <li>Fetch weather when you enable weather and grant location permission.</li>
               <li>Analyze reliability, crashes, performance, and high-level feature usage trends.</li>
               <li>Comply with legal obligations and enforce our terms.</li>
@@ -112,8 +115,8 @@ export default function PrivacyPolicyPage() {
             <ul>
               <li>Google/Firebase services for authentication, analytics, crash reporting, and infrastructure.</li>
               <li>Google Play Billing for subscription purchase and entitlement handling.</li>
-              <li>The War Room backend and cloud providers used to operate AI Helper, support tickets, subscriptions, and admin tools.</li>
-              <li>AI service providers used to generate AI Helper responses when you use the AI feature.</li>
+              <li>The War Room backend, hosted on Google Cloud, and Upstash, used to operate AI Helper, daily message limits, support tickets, and subscriptions.</li>
+              <li>Google Gemini through Google Cloud Vertex AI, used to generate AI Helper responses when you use the AI feature.</li>
               <li>Open-Meteo for weather requests when weather is enabled.</li>
               <li>Authorities or other parties where disclosure is required by law, legal process, or to protect rights, safety, and security.</li>
             </ul>
@@ -128,6 +131,13 @@ export default function PrivacyPolicyPage() {
             <p>
               Cloud-backed data is retained only as long as needed to provide the service, maintain account and subscription records, respond to support requests, troubleshoot reliability issues, prevent abuse, comply with law, and enforce our terms.
             </p>
+            <ul>
+              <li>AI Helper messages and replies: not stored on our servers.</li>
+              <li>Daily AI Helper message counter: deleted automatically at the end of each day.</li>
+              <li>Server request logs and subscription events (no AI Helper message content): kept by Google Cloud Logging for up to 30 days.</li>
+              <li>Subscription records: kept while relevant and as needed for billing, fraud prevention, and legal requirements.</li>
+              <li>Support tickets and your anonymous ID record: kept while needed to provide the service, or until you request deletion.</li>
+            </ul>
 
             <h2>Your Choices</h2>
             <p>You can control some data practices directly through your device settings, Google Play account, and the permissions or product settings you choose inside the app.</p>

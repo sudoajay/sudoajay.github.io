@@ -57,7 +57,7 @@ const features = [
   },
   {
     title: "AI Helper",
-    text: "Get optional guidance based on the context you choose to share with the assistant.",
+    text: "Ask about your habits and get answers based on your own usage, plus quick follow-up questions to tap. Chat history is saved only on your device.",
     icon: Bot,
   },
 ];
